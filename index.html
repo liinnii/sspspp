@@ -1,0 +1,515 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Занятие: сложносочинённое предложение</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Yeseva+One&display=swap"><style>
+:root{--pale:#E3F0FF;--sky:#A9CFFF;--accent:#5FA8FF;--blue:#1F5FBF;--navy:#0F2A52;--bg:#fff;--paper:#fff;--mist:#F0F7FF;--ink:#0F2A52;--soft:#4A6285;--line:rgba(15,42,82,.16);--on:#F2F8FF;--bad:#B4472F;--bad-soft:#F8DED7;--ok-soft:#D4E8FF;--fd:'Yeseva One',Georgia,serif;--fb:'Onest',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--fb);overflow-x:hidden}
+h1,h2,h3,p,ul,ol{margin:0}ul,ol{padding:0;list-style:none}
+.wrap{max-width:1040px;margin-inline:auto;padding-inline:16px}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;border-radius:999px;border:2px solid var(--blue);background:var(--blue);color:var(--on);font:600 .95rem/1.2 var(--fb);cursor:pointer;transition:background .2s}
+.btn:hover:not(:disabled){background:var(--navy);border-color:var(--navy)}
+.btn.ghost{background:transparent;color:var(--blue)}.btn.ghost:hover:not(:disabled){color:var(--on);background:var(--blue);border-color:var(--blue)}
+.btn:disabled{opacity:.45;cursor:default}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:19;background:var(--bg)}
+.top .wrap{display:flex;align-items:center;gap:12px;padding-block:8px;flex-wrap:wrap}
+.mark{width:40px;height:40px;border-radius:13px;background:var(--blue);color:var(--sky);display:grid;place-items:center;font:1.1rem var(--fd);flex:none}
+.bst{flex:1 1 10rem;min-width:0;font-weight:600;font-size:.95rem;line-height:1.3}.bst small{display:block;color:var(--soft);font-weight:500;font-size:.78rem}
+.clock{font-variant-numeric:tabular-nums;font-weight:700;font-size:1.15rem}.clock.over{color:var(--bad)}
+.hero{padding-block:20px 40px}
+.panel{position:relative;overflow:hidden;isolation:isolate;border-radius:28px;background:var(--mist)}
+.panel::before{content:"";position:absolute;z-index:-1;inset:-30% -25% -30% 30%;background:conic-gradient(from 210deg at 40% 55%,#A9CFFF,#E3F0FF 16%,#5FA8FF 36%,#A9CFFF 54%,#1F5FBF 72%,#A9CFFF 88%);filter:blur(50px);opacity:.3}
+.hg{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;padding:clamp(20px,5vw,56px)}
+@media(min-width:900px){.hg{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center}}
+.hg>*{min-width:0}
+h1{font:400 clamp(1.5rem,6.2vw,4rem)/1.1 var(--fd);margin-bottom:16px;text-wrap:balance;overflow-wrap:anywhere;hyphens:auto}
+.meta{font-weight:600;margin-bottom:14px}
+.facts{display:grid;gap:8px;margin-bottom:22px}.facts li{padding-left:26px;position:relative;font-weight:500}
+.facts li::before{content:"✦";position:absolute;left:0;color:var(--blue)}
+.lab{background:var(--navy);color:var(--sky);border-radius:28px;padding:clamp(18px,3vw,28px);display:grid;gap:12px}
+.lab .cap{font:400 1.15rem/1.3 var(--fd);color:var(--pale);text-align:center}.lab .cap span{color:var(--accent)}
+.lab .st{display:grid;grid-template-columns:2rem 1fr;gap:10px;align-items:center;color:var(--pale);font-weight:500}
+.lab .st b{font:400 1.4rem/1 var(--fd);color:var(--accent)}
+.agenda{display:grid;gap:8px;max-width:34rem}
+.agenda a{display:grid;grid-template-columns:5rem 1fr;gap:10px;padding:9px 14px;border-radius:14px;background:var(--paper);color:inherit;text-decoration:none;font-weight:500;border:1px solid var(--line)}
+.agenda a:hover{background:var(--sky)}.agenda b{color:var(--blue);font-variant-numeric:tabular-nums}
+.stage{padding-block:clamp(40px,6vw,72px);border-top:1px solid var(--line);background:#fff}
+.sg{display:grid;grid-template-columns:7rem minmax(0,1fr);gap:0 28px}
+.mins{font:400 1.7rem/1.1 var(--fd);color:var(--blue)}.mins small{display:block;font:600 .75rem var(--fb);color:var(--soft);margin-top:4px}
+.stage.now .mins{color:var(--navy);background:var(--accent);border-radius:14px;padding:8px 12px;align-self:start;width:fit-content}
+.body{display:grid;gap:18px;align-content:start;min-width:0}
+h2{font:400 clamp(1.45rem,5.2vw,2.7rem)/1.15 var(--fd);text-wrap:balance;overflow-wrap:anywhere;hyphens:auto}
+.lead{max-width:40rem;color:var(--soft)}
+.tt{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.card{background:var(--bg);border-radius:24px;padding:20px;display:grid;gap:12px;border:1px solid var(--line);min-width:0}
+.card h3{font:400 1.4rem/1.2 var(--fd)}
+.card h3 small{display:block;font:600 .82rem var(--fb);color:var(--blue);margin-bottom:4px}
+.key{background:var(--mist);border-radius:16px;padding:12px 16px;font-size:.95rem;max-width:44rem}
+.ask{background:var(--sky);border-radius:20px;padding:14px 18px;max-width:40rem}.ask .tt{color:var(--navy)}
+.warn{background:var(--bad-soft);border-radius:16px;padding:12px 16px;font-size:.95rem;max-width:44rem}.warn .tt{color:var(--bad)}
+.dt{border:1px solid var(--line);border-radius:14px;padding:10px 16px;background:#fff;font-size:.95rem;max-width:44rem}.dt summary{cursor:pointer;color:var(--blue);font-weight:600}.dt p{margin-top:8px}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;font-size:.97rem;background:#fff}
+.tbl th,.tbl td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{background:var(--mist);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.tbl tr:last-child td{border-bottom:0}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.nums{display:grid;gap:8px}
+.num{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;padding:7px 12px;border-radius:14px;background:var(--mist);font-size:.95rem}
+.num b{font:400 1.5rem/1 var(--fd);min-width:2.4rem;text-align:right;color:var(--blue)}
+.eqb{font:400 clamp(1.1rem,3.4vw,1.6rem)/1.5 var(--fd);color:var(--ink);word-break:break-word;margin:6px 0 4px}
+.q{background:#fff;border-radius:24px;padding:20px;display:grid;gap:12px;border:1px solid var(--line)}
+.q.bad{border-color:var(--bad)}
+.q h3{font:600 1.1rem/1.35 var(--fb)}.q h3 small{display:block;color:var(--blue);font-weight:600;font-size:.82rem;margin-bottom:4px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;cursor:pointer;font:inherit;padding:11px 16px;border-radius:16px;border:2px solid var(--line);background:#fff;color:inherit;width:100%}
+.opt:hover:not(:disabled){border-color:var(--blue)}.opt[aria-pressed=true]{border-color:var(--blue);background:var(--ok-soft)}
+.opt.ok,.opt.ok[aria-pressed=true]{border-color:var(--blue);background:var(--ok-soft);font-weight:600}
+.opt.no,.opt.no[aria-pressed=true]{border-color:var(--bad);background:var(--bad-soft);color:var(--bad);font-weight:600}
+.q details{font-size:.95rem}.q summary{cursor:pointer;color:var(--blue);font-weight:600}.q details p{margin-top:8px}
+.q.bad details{background:var(--bad-soft);border-radius:14px;padding:12px 16px}.q.bad summary{color:var(--bad)}
+.rows{display:grid;gap:10px}.sc{font-weight:700}
+.res{background:var(--accent);color:var(--navy);border-radius:24px;padding:18px 22px;font:400 1.4rem/1.3 var(--fd)}
+.hw{background:var(--blue);color:var(--on);border-radius:24px;padding:24px;display:grid;gap:12px;max-width:44rem}
+.hw h3{font:400 1.6rem/1.2 var(--fd)}.hw .tt{color:var(--sky)}.hw p{font-size:1.05rem}
+.hw .btn{background:var(--sky);border-color:var(--sky);color:var(--navy)}.hw .btn:hover:not(:disabled){background:var(--pale);border-color:var(--pale)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.note{font-size:.95rem;color:var(--soft)}.hw .note{color:var(--sky)}
+footer{background:var(--navy);color:var(--sky);padding:22px 0 30px;font-size:.92rem}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.js .rv.in{opacity:1;transform:none}
+@media(max-width:720px){.sg{grid-template-columns:minmax(0,1fr);gap:12px}.mins{display:flex;gap:10px;align-items:baseline}.mins small{margin:0}.top .btn{padding:8px 14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}}
+.trn{background:var(--mist);border:2px solid var(--blue)}
+.tqt{font:600 1.05rem/1.5 var(--fb);margin-bottom:10px}
+.tfb{border-radius:16px;padding:12px 16px;font-size:.95rem;background:#fff;border:1px solid var(--line)}
+.tfb.ok{background:var(--ok-soft);border-color:var(--blue)}.tfb.no{background:var(--bad-soft);border-color:var(--bad)}.tfb.no b{color:var(--bad)}
+.easy{background:#EAF3FF;border:2px dashed var(--accent);border-radius:20px;padding:14px 18px;max-width:44rem;display:grid;gap:6px;font-size:1.05rem}
+.easy .tt{color:var(--blue)}.easy b{color:var(--blue)}
+.nbt{margin-top:6px}
+.nb{background:#FFFDF2;color:#1d2b44;border:2px solid #E3C95C;border-radius:10px;padding:18px 20px;background-image:linear-gradient(transparent 31px,#cfe0f5 32px);background-size:100% 32px;line-height:32px;max-width:46rem}
+.nb b{color:var(--blue)}
+.nb .t{font:400 1.25rem var(--fd);text-align:center;line-height:40px}
+.nb table{border-collapse:collapse;width:100%;line-height:1.4;background:#FFFDF2}
+.nb td,.nb th{border:1px solid #9bb8e0;padding:6px 8px;text-align:left;vertical-align:top;font-size:.93rem}
+</style></head><body>
+<div class="top"><div class="wrap">
+  <div class="mark">Рус</div>
+  <div class="bst"><small>Сейчас</small><span id="bs">Занятие не начато</span></div>
+  <div class="clock" id="clock">00:00 / 60:00</div>
+  <button class="btn" id="tg" type="button">Старт</button>
+  <button class="btn ghost" id="rs" type="button">Сначала</button>
+</div></div>
+
+<header class="wrap hero"><div class="panel"><div class="hg">
+  <div>
+    <p class="meta">Русский язык · ОГЭ · сложное предложение</p>
+    <h1>Сложносочинённое предложение</h1>
+    <p class="meta">Лайфхаки · практика · 60 минут</p>
+    <ul class="facts">
+      <li>Теории минимум: один алгоритм и шесть лайфхаков вместо заучивания</li>
+      <li>Всё определяется за 10 секунд: подлежащие, союз, общее слово</li>
+      <li>Большая часть занятия практика: тренажёры без конца</li>
+      <li>В конце три вопроса по подтеме и домашнее задание на 12 минут</li>
+    </ul>
+    <ol class="agenda">
+      <li><a href="#s1"><b>0–3′</b><span>Цель</span></a></li>
+      <li><a href="#s2"><b>3–10′</b><span>Алгоритм и лайфхаки</span></a></li>
+      <li><a href="#s3"><b>10–22′</b><span>Практика 1: основы</span></a></li>
+      <li><a href="#s4"><b>22–34′</b><span>Практика 2: союзы и вид</span></a></li>
+      <li><a href="#s5"><b>34–46′</b><span>Практика 3: запятая</span></a></li>
+      <li><a href="#s6"><b>46–52′</b><span>Блиц как в ОГЭ</span></a></li>
+      <li><a href="#s7"><b>52–57′</b><span>Три вопроса по подтеме</span></a></li>
+      <li><a href="#s8"><b>57–60′</b><span>Домашнее задание</span></a></li>
+    </ol>
+  </div>
+  <div class="lab">
+    <div class="st"><b>1</b><span>Одно подлежащее — простое, запятой нет</span></div>
+    <div class="st"><b>2</b><span>Два подлежащих и союз И, А, НО, ИЛИ — это ССП</span></div>
+    <div class="st"><b>3</b><span>Есть общее слово — запятой перед И нет</span></div>
+    <p class="cap">Три шага вместо <span>заучивания</span></p>
+  </div>
+</div></div></header>
+
+<main>
+<section class="stage" id="s1" data-start="0" data-name="Цель"><div class="wrap sg">
+  <div class="mins">0–3′<small>минут</small></div>
+  <div class="body">
+    <h2>Цель занятия</h2>
+    <p class="lead">Сегодня почти без теории. Дадим алгоритм и лайфхаки, а потом тренируемся, пока определение предложения не станет автоматическим: не больше 10 секунд на предложение.</p>
+    <div class="easy"><span class="tt">Простыми словами</span><p><b>Сложносочинённое предложение (ССП)</b> — это два простых предложения, соединённых союзом «и», «а», «но» или «или». Части равные: ни одна не главнее другой.</p></div>
+    <div class="ask"><span class="tt">Спросить ученика</span><p>Что такое подлежащее и сказуемое? Сколько их в предложении «Дождь кончился, и выглянуло солнце»?</p></div>
+    <details class="dt"><summary>Ответы для репетитора</summary><p>Подлежащее и сказуемое вместе это грамматическая основа. В примере две основы: «дождь кончился» и «выглянуло солнце». Если ученик не находит основы, потратьте две минуты и потренируйте именно это: без основ дальше не пойдём.</p></details>
+  </div>
+</div></section>
+
+<section class="stage" id="s2" data-start="3" data-name="Алгоритм и лайфхаки"><div class="wrap sg">
+  <div class="mins">3–10′<small>минут</small></div>
+  <div class="body">
+    <h2>Алгоритм и лайфхаки</h2>
+    <p class="lead">Это вся теория. Выучивать не нужно: на практике будем применять эти шаги, и они запомнятся сами.</p>
+    <h3 class="tt">Алгоритм на 10 секунд</h3>
+    <ol class="nums">
+      <li class="num"><b>1</b><span><b>Найди подлежащие.</b> Одно подлежащее — простое предложение, запятая перед «и» не нужна. Стоп.</span></li>
+      <li class="num"><b>2</b><span><b>Два подлежащих — смотри на союз.</b> И, А, НО, ИЛИ — ССП. Что, когда, если, потому что — СПП.</span></li>
+      <li class="num"><b>3</b><span><b>Ищи общее слово.</b> Есть слово, которое относится к обеим частям — запятой перед «и» нет. Нет — запятая нужна.</span></li>
+    </ol>
+    <h3 class="tt">Лайфхаки</h3>
+    <div class="scroll"><table class="tbl">
+      <tr><th>Лайфхак</th><th>Как работает</th></tr>
+      <tr><td><b>Считай подлежащие</b></td><td>Сколько «кто? что?», столько и частей. Союз «и» сам по себе ничего не доказывает.</td></tr>
+      <tr><td><b>Набор И-А-НО-ИЛИ</b></td><td>Союзы ССП запоминаем набором: и, а, но, или (ещё да, либо, однако, зато, то…то). Любой другой союз — подчинительный.</td></tr>
+      <tr><td><b>Вопрос к части</b></td><td>Можно задать вопрос от одной части к другой («когда?», «почему?», «что?») — это СПП. Нельзя — ССП.</td></tr>
+      <tr><td><b>А и НО</b></td><td>Перед «а» и «но» запятая стоит всегда. Думаем только про «и» (и «или»).</td></tr>
+      <tr><td><b>Общее слово</b></td><td>Слово в начале («вечером», «к счастью», «когда кончился дождь»), которое относится к обеим частям. Тогда перед «и» запятой нет.</td></tr>
+      <tr><td><b>Смысл по союзу</b></td><td>И — плюс (одно и другое). А, НО, ЗАТО — против. ИЛИ, ТО…ТО — выбор или смена.</td></tr>
+    </table></div>
+    <div class="card trn" id="st1"></div>
+    <div class="warn"><span class="tt">Главная ловушка</span><br>Видишь «и» и сразу пишешь «ССП»? Сначала посчитай подлежащие. В «Мальчик взял куртку и вышел» подлежащее одно: предложение простое.</div>
+    <div class="tt nbt">✎ Что записать в тетрадь</div>
+    <div class="nb"><div class="t">Шпаргалка: ССП</div>
+      <p><b>1.</b> Одно подлежащее — простое, запятой перед «и» нет.</p>
+      <p><b>2.</b> Два подлежащих: И, А, НО, ИЛИ — ССП; что, когда, если — СПП.</p>
+      <p><b>3.</b> Есть общее слово — запятой нет. Нет — запятая. Перед А, НО запятая всегда.</p>
+      <p><b>Смысл:</b> И — плюс, А/НО — против, ИЛИ — выбор. Схема: [ ], и [ ].</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="stage" id="s3" data-start="10" data-name="Практика 1: основы"><div class="wrap sg">
+  <div class="mins">10–22′<small>минут</small></div>
+  <div class="body">
+    <h2>Практика 1: основы</h2>
+    <p class="lead">Шаг 1 алгоритма: подлежащие. Говорим вслух: «подлежащее… сказуемое… подлежащее… сказуемое». Не угадываем.</p>
+    <div class="card trn" id="tr1"></div>
+    <div class="card trn" id="trc"></div>
+    <div class="warn"><span class="tt">Типичная ошибка</span><br>Принять второе сказуемое за вторую основу. Нужно новое <b>подлежащее</b>, а не новый глагол.</div>
+    <details class="dt"><summary>Ответы для репетитора</summary><p>Если ученик ошибся, пусть назовёт вслух подлежащее каждой части. Если подлежащее одно, предложение простое. Повторите ошибочное предложение в конце блока.</p></details>
+  </div>
+</div></section>
+
+<section class="stage" id="s4" data-start="22" data-name="Практика 2: союзы и вид"><div class="wrap sg">
+  <div class="mins">22–34′<small>минут</small></div>
+  <div class="body">
+    <h2>Практика 2: союзы и вид предложения</h2>
+    <p class="lead">Шаг 2 алгоритма: союз. Сначала распознаём союзы мгновенно, потом определяем вид предложения целиком и смысл связи.</p>
+    <div class="card trn" id="tru"></div>
+    <div class="card trn" id="tr4"></div>
+    <div class="card trn" id="tr2"></div>
+    <div class="warn"><span class="tt">Типичная ошибка</span><br>Решить по союзу, не считая подлежащие: «Девочка взяла зонтик, но не раскрыла его» — простое, хотя союз «но» есть и запятая тоже.</div>
+    <details class="dt"><summary>Ответы для репетитора</summary><p>Если ученик путает ССП и СПП, пусть задаст вопрос от одной части к другой: «вышли (когда?) когда кончился дождь» — СПП. Если вопрос не получается, это ССП. Для смысла: И — плюс, А/НО — против, ИЛИ — выбор.</p></details>
+  </div>
+</div></section>
+
+<section class="stage" id="s5" data-start="34" data-name="Практика 3: запятая"><div class="wrap sg">
+  <div class="mins">34–46′<small>минут</small></div>
+  <div class="body">
+    <h2>Практика 3: запятая</h2>
+    <p class="lead">Шаг 3 алгоритма: общее слово. Запятая нужна, если общего слова нет. Перед «а» и «но» запятая всегда.</p>
+    <div class="card trn" id="tr3"></div>
+    <div class="card trn" id="trp"></div>
+    <div class="card trn" id="tr5"></div>
+    <div class="easy"><span class="tt">Проверка на общее слово</span><p>Попробуй перенести слово из начала предложения в конец первой части и спроси: «Нужно ли повторять его во второй?» Не нужно — слово общее, запятой нет.</p></div>
+    <details class="dt"><summary>Ответы для репетитора</summary><p>Общие члены в тренажёрах: «вечером», «утром», «в лесу», «зимой», «к вечеру» (обстоятельства), «к счастью» (вводное слово), «когда кончился дождь» (придаточное). Если ученик ставит запятую в простом предложении с одним подлежащим, вернитесь к шагу 1 алгоритма.</p></details>
+  </div>
+</div></section>
+
+<section class="stage" id="s6" data-start="46" data-name="Блиц как в ОГЭ"><div class="wrap sg">
+  <div class="mins">46–52′<small>минут</small></div>
+  <div class="body">
+    <h2>Блиц как в ОГЭ</h2>
+    <p class="lead">Задания вперемешку: не знаешь, какой шаг алгоритма понадобится. На каждое не больше 10 секунд.</p>
+    <div class="card trn" id="trm"></div>
+    <div class="card trn" id="trb"></div>
+  </div>
+</div></section>
+
+<section class="stage" id="s7" data-start="52" data-name="Три вопроса по подтеме"><div class="wrap sg">
+  <div class="mins">52–57′<small>минут</small></div>
+  <div class="body">
+    <h2>Три вопроса по подтеме</h2>
+    <p class="lead">Подтема: «Сложносочинённое предложение». Ученик отвечает сам, ошибка подсвечивается красным, разбор спрятан под вопросом.</p>
+    <div class="rows" id="qs"></div>
+    <p class="sc" id="sc">Отвечено: 0 из 3</p>
+    <div class="res" id="rs3" hidden></div>
+    <div class="tt nbt">✎ Что записать в тетрадь</div>
+    <div class="nb"><div class="t">Работа над ошибками</div>
+      <p>К каждой ошибке три строки: что перепутал → правило одной строкой → как проверить (подлежащие, союз, общее слово).</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="stage" id="s8" data-start="57" data-name="Домашнее задание"><div class="wrap sg">
+  <div class="mins">57–60′<small>минут</small></div>
+  <div class="body">
+    <h2>Домашнее задание</h2>
+    <div class="hw">
+      <span class="tt">Домашнее задание · около 12 минут</span>
+      <h3>Конспект и пять сложных предложений</h3>
+      <p>Прочитать конспект по подтеме «Сложносочинённое предложение» и решить 5 сложных предложений; к каждой ошибке записать правило (около 12 мин).</p>
+      <div class="btns"><button class="btn" id="cp" type="button">Скопировать задание</button><span class="note" id="cm"></span></div>
+    </div>
+    <div class="tt nbt">✎ Что записать в тетрадь</div>
+    <div class="nb"><div class="t">Домашнее задание</div>
+      <p>Для каждого предложения: подчеркнуть основы, определить вид, поставить запятые, составить схему.</p>
+      <p>К каждой ошибке: ошибка → правило одной строкой → как проверить.</p>
+    </div>
+    <div class="key"><span class="tt">В конце занятия</span><br>Ученик называет три шага алгоритма, объясняет, почему «Мы вышли и пошли» — простое предложение, и составляет схему к «Лес молчал, а река шумела».</div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap">Русский язык · занятие по теме «Сложносочинённое предложение».</div></footer>
+
+<script>(function(){
+document.documentElement.classList.add('js');
+var $=function(i){return document.getElementById(i)};
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function rnd(n){return Math.floor(Math.random()*n)}
+function pick(a){return a[rnd(a.length)]}
+function shuf(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=rnd(i+1),t=a[i];a[i]=a[j];a[j]=t}return a}
+function mcq(right,wrong){var all=shuf([right].concat(wrong));return {opts:all,correct:all.indexOf(right)}}
+
+/* ===== пошаговый разбор ===== */
+function stepper(id,title,steps){var root=$(id),i=0;
+  root.innerHTML='<h3><small>Разбор по шагам</small>'+title+'</h3><div class="eqb" data-r="eq"></div><div class="tfb" data-r="tx"></div><div class="btns"><button class="btn ghost" type="button" data-r="bk">Назад</button><button class="btn" type="button" data-r="nx">Дальше</button><span class="note" data-r="sc"></span></div>';
+  function R(n){return root.querySelector('[data-r="'+n+'"]')}
+  function draw(){var s=steps[i];R('eq').innerHTML=s.eq;R('tx').innerHTML=s.t;
+    R('tx').className='tfb'+(i===steps.length-1?' ok':'');
+    R('bk').disabled=i===0;R('nx').disabled=i===steps.length-1;R('sc').textContent='Шаг '+(i+1)+' из '+steps.length}
+  R('nx').addEventListener('click',function(){if(i<steps.length-1){i++;draw()}});
+  R('bk').addEventListener('click',function(){if(i>0){i--;draw()}});draw()}
+stepper('st1','Алгоритм на примере: Вечером стемнело и пошёл дождь.',[
+ {eq:'Вечером стемнело и пошёл дождь.',t:'<b>Шаг 1. Подлежащие.</b> «Стемнело» (безличное, без подлежащего, это целая основа) и «дождь пошёл». Две основы, значит, предложение сложное.'},
+ {eq:'… и …',t:'<b>Шаг 2. Союз.</b> «И» сочинительный. От одной части к другой вопрос не задать. Это ССП.'},
+ {eq:'Вечером → стемнело, вечером → пошёл дождь',t:'<b>Шаг 3. Общее слово.</b> «Вечером» относится к обеим частям: повторять его не нужно.'},
+ {eq:'[ и ]',t:'<b>Итог.</b> Общее слово есть, поэтому запятой перед «и» нет. Схема: [ и ]. Сравни: «Дул ветер, и шумели деревья» — общего слова нет, запятая нужна: [ ], и [ ].'}]);
+
+/* ===== тренажёры ===== */
+function trainer(id,cfg){
+  var root=$(id),S={ok:0,tot:0,st:0,t:null,done:false};
+  root.innerHTML='<h3><small>Тренажёр · '+cfg.tag+'</small>'+cfg.title+'</h3><div data-r="q"></div><div class="tfb" data-r="fb" role="status" aria-live="polite" hidden></div><div class="btns"><button class="btn ghost" type="button" data-r="nx" disabled>Следующее задание</button><span class="note" data-r="sc">Верно: 0 из 0</span></div>';
+  function R(n){return root.querySelector('[data-r="'+n+'"]')}
+  function score(){R('sc').textContent='Верно: '+S.ok+' из '+S.tot+(S.st>1?' · серия '+S.st:'')}
+  function render(){var t=S.t=cfg.gen();S.done=false;
+    R('q').innerHTML='<div class="tqt">'+t.q+'</div><div class="opts">'+t.opts.map(function(o){return '<button class="opt" type="button" aria-pressed="false">'+o+'</button>'}).join('')+'</div>';
+    var fb=R('fb');fb.hidden=true;fb.className='tfb';fb.innerHTML='';R('nx').disabled=true}
+  R('q').addEventListener('click',function(ev){var o=ev.target.closest('.opt');if(!o||S.done)return;
+    var all=[].slice.call(R('q').querySelectorAll('.opt')),i=all.indexOf(o),ok=i===S.t.correct;
+    all.forEach(function(x,k){x.disabled=true;x.setAttribute('aria-pressed',k===i?'true':'false');x.classList.toggle('ok',k===S.t.correct);x.classList.toggle('no',k===i&&!ok)});
+    S.done=true;S.tot++;if(ok){S.ok++;S.st++}else S.st=0;
+    var fb=R('fb');fb.hidden=false;fb.className='tfb '+(ok?'ok':'no');fb.innerHTML='<b>'+(ok?'Верно. ':'Пока нет. ')+'</b>'+S.t.ex;
+    R('nx').disabled=false;score()});
+  R('nx').addEventListener('click',render);render()}
+
+/* --- 1. простое или сложное --- */
+var SC=[
+ ['Солнце село, и в лесу стало темно.',1,'Две основы: «солнце село» и «стало темно». Сложное.'],
+ ['Ветер стих, но дождь не прекратился.',1,'Две основы: «ветер стих» и «дождь не прекратился». Сложное.'],
+ ['Гром гремел, а молнии сверкали.',1,'Две основы: «гром гремел» и «молнии сверкали». Сложное.'],
+ ['Пошёл снег, и дорогу замело.',1,'Две основы: «пошёл снег» и «дорогу замело». Сложное.'],
+ ['Или дождь закончится, или ветер утихнет.',1,'Две основы: «дождь закончится» и «ветер утихнет». Сложное.'],
+ ['Прозвенел звонок, и ученики вышли из класса.',1,'Две основы: «прозвенел звонок» и «ученики вышли». Сложное.'],
+ ['Лес молчал, а река тихо шумела.',1,'Две основы: «лес молчал» и «река шумела». Сложное.'],
+ ['Я звал друга, но он не слышал.',1,'Две основы: «я звал» и «он не слышал». Сложное.'],
+ ['Мама готовила обед, а папа читал газету.',1,'Две основы: «мама готовила» и «папа читал». Сложное.'],
+ ['Наступила ночь, и в окнах погас свет.',1,'Две основы: «наступила ночь» и «свет погас». Сложное.'],
+ ['Туман поднялся над рекой и растаял.',0,'Подлежащее «туман» одно, сказуемых два. Простое.'],
+ ['Мальчик взял куртку и вышел во двор.',0,'Подлежащее «мальчик» одно, сказуемых два. Простое.'],
+ ['Ученики писали диктант и проверяли ошибки.',0,'Подлежащее «ученики» одно. Простое.'],
+ ['Весь день я читал и отдыхал.',0,'Подлежащее «я» одно. Простое.'],
+ ['Сестра накрыла на стол и позвала всех ужинать.',0,'Подлежащее «сестра» одно. Простое.'],
+ ['Девочка взяла зонтик, но не раскрыла его.',0,'Подлежащее «девочка» одно. Простое, хотя есть «но» и запятая.'],
+ ['Бабушка сидела у окна и вязала носки.',0,'Подлежащее «бабушка» одно. Простое.'],
+ ['Мы вышли из дома и пошли к реке.',0,'Подлежащее «мы» одно. Простое.'],
+ ['Он открыл дверь, но не вошёл.',0,'Подлежащее «он» одно. Простое.'],
+ ['Дети бегали по двору и громко смеялись.',0,'Подлежащее «дети» одно. Простое.']];
+function genSC(){var e=pick(SC);
+  return {q:'Простое или сложное: <b>'+e[0]+'</b>',opts:['простое','сложное'],correct:e[1]?1:0,ex:e[2]}}
+trainer('tr1',{tag:'подлежащие',title:'Простое или сложное',gen:genSC});
+
+/* --- 2. сколько основ --- */
+var CN=[
+ ['Солнце село, и в лесу стало темно.',2,'«Солнце село» и «стало темно».'],
+ ['Мальчик взял куртку и вышел.',1,'Подлежащее «мальчик» одно.'],
+ ['Гром гремел, молния сверкала, и пошёл дождь.',3,'«Гром гремел», «молния сверкала», «пошёл дождь».'],
+ ['Ветер стих, а дождь не прекратился.',2,'«Ветер стих» и «дождь не прекратился».'],
+ ['Мы шли по лесу и собирали грибы.',1,'Подлежащее «мы» одно, сказуемые «шли» и «собирали».'],
+ ['Зашло солнце, похолодало, и в домах зажёгся свет.',3,'«Зашло солнце», «похолодало», «свет зажёгся».'],
+ ['Дождь шёл всю ночь, и к утру река разлилась.',2,'«Дождь шёл» и «река разлилась».'],
+ ['Птицы пели, цветы цвели, и всё вокруг радовалось.',3,'«Птицы пели», «цветы цвели», «всё радовалось».'],
+ ['Он встал, умылся и вышел из дома.',1,'Подлежащее «он» одно, сказуемых три.'],
+ ['Она читала книгу, а он смотрел в окно.',2,'«Она читала» и «он смотрел».']];
+function genCN(){var e=pick(CN),o=['одна основа','две основы','три основы'];
+  return {q:'Сколько основ в предложении: <b>'+e[0]+'</b>',opts:o,correct:e[1]-1,ex:e[2]+' Основ: '+e[1]+'.'}}
+trainer('trc',{tag:'подлежащие',title:'Сколько основ',gen:genCN});
+
+/* --- 3. союз-детектор --- */
+var UN=[['и',0],['а',0],['но',0],['или',0],['либо',0],['однако',0],['зато',0],['да (= но)',0],['то…то',0],['не то…не то',0],
+ ['что',1],['когда',1],['потому что',1],['если',1],['чтобы',1],['хотя',1],['который',1],['пока',1],['так как',1],['где',1],['как',1],['словно',1]];
+function genUN(){var e=pick(UN);
+  return {q:'Какой это союз: <b>«'+e[0]+'»</b>',opts:['сочинительный (ССП)','подчинительный (СПП)'],correct:e[1],
+  ex:e[1]===0?'Сочинительный: части равны. Набор для ССП: и, а, но, или (+ да, либо, однако, зато, то…то).':'Подчинительный: вводит придаточную часть, от главной можно задать вопрос. Это СПП.'}}
+trainer('tru',{tag:'союз-детектор',title:'Сочинительный или подчинительный',gen:genUN});
+
+/* --- 4. вид предложения --- */
+var T1='ССП',T2='простое с однородными сказуемыми',T3='сложноподчинённое (СПП)';
+var TP=[
+ ['Дождь кончился, и мы вышли гулять.',T1,'Два подлежащих («дождь», «мы»), союз «и» сочинительный.'],
+ ['Ветер стих, но тучи не рассеялись.',T1,'Два подлежащих, союз «но» сочинительный.'],
+ ['Лес молчал, а река тихо шумела.',T1,'Два подлежащих, союз «а» сочинительный.'],
+ ['Солнце село, и в лесу стало темно.',T1,'Две основы, союз «и».'],
+ ['Либо ты придёшь вовремя, либо я уйду без тебя.',T1,'Две основы, повторяющиеся союзы «либо…либо».'],
+ ['Ночь была тёмной, зато звёзды сияли ярко.',T1,'Две основы, союз «зато» сочинительный.'],
+ ['Мы вышли из дома и пошли к реке.',T2,'Подлежащее «мы» одно, сказуемых два.'],
+ ['Девочка взяла зонтик, но не раскрыла его.',T2,'Подлежащее «девочка» одно, запятая стоит из-за «но».'],
+ ['Бабушка сидела у окна и вязала носки.',T2,'Подлежащее «бабушка» одно.'],
+ ['Он открыл дверь, но не вошёл.',T2,'Подлежащее «он» одно.'],
+ ['Дети бегали по двору и громко смеялись.',T2,'Подлежащее «дети» одно.'],
+ ['Туман поднялся над рекой и растаял.',T2,'Подлежащее «туман» одно.'],
+ ['Мы вышли гулять, когда дождь кончился.',T3,'Вышли (когда?) когда дождь кончился. Союз подчинительный.'],
+ ['Я знаю, что ты придёшь.',T3,'Знаю (что?) что ты придёшь. Союз «что» подчинительный.'],
+ ['Он вернулся, потому что забыл ключи.',T3,'Вернулся (почему?) потому что забыл ключи.'],
+ ['Если пойдёт дождь, мы останемся дома.',T3,'Остаться (при каком условии?) если пойдёт дождь.'],
+ ['Книга, которую я прочитал, мне понравилась.',T3,'«Которую» подчинительный союз, придаточная часть внутри главной.'],
+ ['Она пришла, чтобы помочь нам.',T3,'Пришла (зачем?) чтобы помочь. Союз «чтобы» подчинительный.']];
+function genTP(){var e=pick(TP),o=[T1,T2,T3];
+  return {q:'Определи вид: <b>'+e[0]+'</b>',opts:o,correct:o.indexOf(e[1]),ex:e[2]}}
+trainer('tr4',{tag:'вид предложения',title:'ССП, СПП или простое',gen:genTP});
+
+/* --- 5. смысл --- */
+var M1='перечисление (И)',M2='противопоставление (А, НО)',M3='разделение (ИЛИ, ТО…ТО)';
+var SM=[
+ ['Дождь прошёл, и выглянуло солнце.',M1,'Союз «и»: одно событие после другого.'],
+ ['Я звал друга, но он не слышал.',M2,'Союз «но»: одно против другого.'],
+ ['То дождь лил как из ведра, то светило солнце.',M3,'«То…то»: события сменяют друг друга.'],
+ ['Либо ты придёшь вовремя, либо я уйду без тебя.',M3,'«Либо…либо»: выбор одного из двух.'],
+ ['Мы пошли в лес, а брат остался дома.',M2,'Союз «а»: сопоставление и противопоставление.'],
+ ['Зима прошла, и наступила весна.',M1,'Союз «и»: события идут по очереди.'],
+ ['Он очень хотел успеть, однако опоздал.',M2,'«Однако» значит «но».'],
+ ['Не то ветер шумел в ветвях, не то вдали гудел поезд.',M3,'«Не то…не то»: неуверенность, выбор одного из двух.'],
+ ['Ночь была тёмной, зато звёзды сияли ярко.',M2,'«Зато»: одно компенсирует другое, это противопоставление.'],
+ ['Прозвенел звонок, и ученики вышли из класса.',M1,'Союз «и»: события по очереди.'],
+ ['Он старался, но ничего не получилось.',M2,'Союз «но»: противопоставление.'],
+ ['Или ты поможешь мне, или я справлюсь сам.',M3,'«Или…или»: выбор.'],
+ ['Гроза утихла, и птицы запели.',M1,'Союз «и»: одно за другим.'],
+ ['Она любит чай, а он любит кофе.',M2,'Союз «а»: сопоставление.']];
+function genSM(){var e=pick(SM),o=[M1,M2,M3];
+  return {q:'Какой смысл связи: <b>'+e[0]+'</b>',opts:o,correct:o.indexOf(e[1]),ex:e[2]}}
+trainer('tr2',{tag:'смысл',title:'Подсказывает союз',gen:genSM});
+
+/* --- 6. нужна ли запятая --- */
+var CM=[
+ ['Наступила ночь и в окнах погас свет.',1,'Две основы, общего слова нет. Запятая нужна: Наступила ночь, и в окнах погас свет.'],
+ ['Вечером стемнело и пошёл дождь.',0,'«Вечером» общее для обеих частей. Запятая не нужна.'],
+ ['Туман рассеялся и открылась река.',1,'Общего слова нет. Запятая нужна.'],
+ ['К счастью ветер стих и дождь прекратился.',0,'«К счастью» общее вводное слово. Запятая не нужна.'],
+ ['Мама приготовила обед и мы сели за стол.',1,'Две основы, общего слова нет. Запятая нужна.'],
+ ['Когда кончился дождь, выглянуло солнце и засияла радуга.',0,'Придаточное «когда кончился дождь» общее. Запятая не нужна.'],
+ ['Дул ветер и шумели деревья.',1,'Общего слова нет. Запятая нужна.'],
+ ['В лесу стемнело и запели совы.',0,'«В лесу» общее обстоятельство. Запятая не нужна.'],
+ ['Солнце скрылось за горой и стало прохладно.',1,'Общего слова нет. Запятая нужна.'],
+ ['К вечеру усилился ветер и пошёл дождь.',0,'«К вечеру» общее. Запятая не нужна.'],
+ ['Часы пробили полночь и город затих.',1,'Две основы, общего слова нет. Запятая нужна.'],
+ ['Утром выпал снег и дороги побелели.',0,'«Утром» общее. Запятая не нужна.'],
+ ['Брат читал книгу а сестра рисовала.',1,'Перед «а» запятая стоит всегда.'],
+ ['Он согласится и поможет нам.',0,'Подлежащее «он» одно: простое предложение, запятой нет.'],
+ ['Ребёнок уснул и в доме стало тихо.',1,'Две основы, общего слова нет. Запятая нужна.'],
+ ['Зимой реки замерзают и дороги покрываются льдом.',0,'«Зимой» общее. Запятая не нужна.'],
+ ['Если пойдёт дождь, мы останемся дома и будем читать.',0,'Подлежащее «мы» одно: простое с однородными сказуемыми, запятой перед «и» нет.'],
+ ['Мы ждали автобус но он не пришёл.',1,'Перед «но» запятая стоит всегда.'],
+ ['Мама пела и дети подпевали.',1,'Два подлежащих («мама», «дети»), общего слова нет. Запятая нужна.'],
+ ['Прозвенел звонок и ученики вышли из класса.',1,'Два подлежащих, общего слова нет. Запятая нужна.']];
+function genCM(){var e=pick(CM);
+  return {q:'Нужна ли запятая перед союзом: <b>'+e[0]+'</b>',opts:['запятая не нужна','запятая нужна'],correct:e[1]?1:0,ex:e[2]}}
+trainer('tr3',{tag:'запятая',title:'Нужна ли запятая',gen:genCM});
+
+/* --- 7. верная пунктуация --- */
+var PN=[
+ ['Туман рассеялся, и открылась река.',['Туман рассеялся и, открылась река.','Туман, рассеялся и открылась река.','Туман рассеялся и открылась река.'],'Две основы без общего слова: запятая перед «и».'],
+ ['Вечером стемнело и пошёл дождь.',['Вечером стемнело, и пошёл дождь.','Вечером, стемнело и пошёл дождь.','Вечером стемнело и, пошёл дождь.'],'Общее обстоятельство «вечером»: запятой нет.'],
+ ['Мы вышли из дома и пошли к реке.',['Мы вышли из дома, и пошли к реке.','Мы вышли, из дома и пошли к реке.','Мы вышли из дома и, пошли к реке.'],'Одно подлежащее: запятая не нужна.'],
+ ['Ветер стих, но тучи остались.',['Ветер стих но, тучи остались.','Ветер стих но тучи остались.','Ветер, стих но тучи остались.'],'Перед «но» запятая всегда.'],
+ ['Девочка взяла зонтик, но не раскрыла его.',['Девочка взяла зонтик но, не раскрыла его.','Девочка, взяла зонтик но не раскрыла его.','Девочка взяла зонтик но не раскрыла его.'],'Предложение простое, но перед «но» запятая всё равно ставится.'],
+ ['Когда кончился дождь, выглянуло солнце и засияла радуга.',['Когда кончился дождь, выглянуло солнце, и засияла радуга.','Когда кончился дождь выглянуло солнце и засияла радуга.','Когда кончился дождь, выглянуло, солнце и засияла радуга.'],'Общее придаточное: запятой перед «и» нет.'],
+ ['Дул ветер, и шумели деревья.',['Дул ветер и шумели деревья.','Дул, ветер и шумели деревья.','Дул ветер и, шумели деревья.'],'Общего слова нет: запятая перед «и».'],
+ ['К счастью, ветер стих и дождь прекратился.',['К счастью, ветер стих, и дождь прекратился.','К счастью ветер стих, и дождь прекратился.','К счастью, ветер, стих и дождь прекратился.'],'Общее вводное слово: запятой перед «и» нет.'],
+ ['Лес молчал, а река шумела.',['Лес молчал а, река шумела.','Лес молчал а река шумела.','Лес, молчал а река шумела.'],'Перед «а» запятая всегда.']];
+function genPN(){var e=pick(PN),m=mcq(e[0],e[1]);
+  return {q:'Выбери верную пунктуацию',opts:m.opts,correct:m.correct,ex:e[2]}}
+trainer('trp',{tag:'пунктуация',title:'Где запятые стоят правильно',gen:genPN});
+
+/* --- 8. схемы --- */
+var S1='[ ], и [ ]',S2='[ ], а [ ]',S3='[ ], но [ ]',S4='[ и ]';
+var SK=[
+ ['Лес молчал, а река шумела.',S2,'Союз «а», запятая перед ним.'],
+ ['Дождь кончился, и выглянуло солнце.',S1,'Союз «и», запятая перед ним.'],
+ ['Ветер стих, но тучи остались.',S3,'Союз «но», запятая перед ним.'],
+ ['Вечером стемнело и пошёл дождь.',S4,'Общее обстоятельство «вечером»: запятой нет.'],
+ ['Гром гремел, а молния сверкала.',S2,'Союз «а», запятая перед ним.'],
+ ['Зима прошла, и наступила весна.',S1,'Союз «и», запятая перед ним.'],
+ ['Я позвонил, но никто не ответил.',S3,'Союз «но», запятая перед ним.'],
+ ['Мама готовила обед, а папа читал газету.',S2,'Союз «а», запятая перед ним.'],
+ ['Утром выпал снег и дороги побелели.',S4,'Общее обстоятельство «утром»: запятой нет.'],
+ ['Часы пробили полночь, и город затих.',S1,'Союз «и», общего слова нет, запятая нужна.']];
+function genSK(){var e=pick(SK),o=[S1,S2,S3,S4];
+  return {q:'Какая схема подходит: <b>'+e[0]+'</b>',opts:o,correct:o.indexOf(e[1]),ex:e[2]}}
+trainer('tr5',{tag:'схемы',title:'Подбери схему',gen:genSK});
+
+/* --- 9. найди ССП среди четырёх --- */
+var MX=[
+ ['Дети вышли во двор, и начался дождь.',['Дети вышли во двор и начали играть.','Дети вышли во двор, когда кончился дождь.','Дети, вышедшие во двор, начали играть.'],'Только здесь два подлежащих и союз «и». Остальные: простое, СПП, простое.'],
+ ['Ветер стих, а тучи остались.',['Мы поняли, что ветер стих.','Ветер стих и затих совсем.','Когда ветер стих, вышло солнце.'],'Только здесь два подлежащих и союз «а». Остальные: СПП, простое, СПП.'],
+ ['Лес молчал, а река шумела.',['Лес молчал и слушал реку.','Лес молчал, пока шумела река.','Лес, молчавший всю ночь, зашумел.'],'Два подлежащих и союз «а». Остальные: простое, СПП, простое.'],
+ ['Я позвонил, но никто не ответил.',['Я позвонил и ждал ответа.','Я позвонил, чтобы узнать новости.','Позвонив, я ждал ответа.'],'Два подлежащих и союз «но». Остальные: простое, СПП, простое.'],
+ ['Гроза утихла, и птицы запели.',['Гроза утихла и ушла на запад.','Птицы запели, когда утихла гроза.','Птицы, испуганные грозой, замолчали.'],'Два подлежащих и союз «и». Остальные: простое, СПП, простое.'],
+ ['Или дождь прекратится, или мы уйдём без зонта.',['Дождь прекратился и стих.','Если дождь прекратится, мы выйдем.','Мы ждали дождя и ветра.'],'Две основы, союзы «или…или». Остальные: простое, СПП, простое.'],
+ ['Мама готовила обед, а папа читал газету.',['Мама готовила обед и пела песни.','Мама сказала, что обед готов.','Папа читал газету, пока мама готовила.'],'Два подлежащих и союз «а». Остальные: простое, СПП, СПП.'],
+ ['Солнце село, и в лесу стало темно.',['Солнце село за лес и скрылось.','Стало темно, потому что солнце село.','Когда солнце село, стало темно.'],'Два подлежащих и союз «и». Остальные: простое, СПП, СПП.']];
+function genMX(){var e=pick(MX),m=mcq(e[0],e[1]);
+  return {q:'Какое предложение сложносочинённое?',opts:m.opts,correct:m.correct,ex:e[2]}}
+trainer('trm',{tag:'как в ОГЭ',title:'Найди ССП среди четырёх',gen:genMX});
+
+/* --- 10. блиц: вперемешку --- */
+var GENS=[genSC,genCN,genUN,genTP,genSM,genCM,genPN,genSK,genMX];
+trainer('trb',{tag:'вперемешку',title:'Блиц: любое задание',gen:function(){return pick(GENS)()}});
+
+/* ===== три вопроса ===== */
+var Q=[
+['Сложносочинённое предложение','Какое предложение является сложносочинённым?',['Дети вышли во двор и начали играть.','Дети вышли во двор, и начался дождь.','Дети вышли во двор, когда кончился дождь.','Дети, вышедшие во двор, начали играть.'],1,'Два подлежащих («дети», «дождь») и союз «и». Первое предложение простое (одно подлежащее), третье СПП, четвёртое простое.'],
+['Сложносочинённое предложение','В каком предложении перед союзом «и» запятая НЕ нужна?',['Солнце зашло и в доме стало темно.','Вечером зашло солнце и стало темно.','Дождь кончился и выглянуло солнце.','Ветер утих и листья перестали шуршать.'],1,'«Вечером» общее слово для обеих частей, запятой нет. В остальных предложениях по два разных подлежащих и общего слова нет, поэтому запятая перед «и» нужна.'],
+['Сложносочинённое предложение','Какая схема подходит к предложению «Гром гремел, а молния сверкала»?',['[ ], и [ ]','[ ], а [ ]','[ ], что [ ]','[ и ]'],1,'Две равные части, между ними запятая и союз «а»: [ ], а [ ].']];
+var ans=[],qs=$('qs');
+function nOk(){var k=0;Q.forEach(function(q,i){if(ans[i]===q[3])k++});return k}
+function nAns(){return ans.filter(function(v){return v!==undefined}).length}
+function paint(i){var d=qs.children[i],wrong=ans[i]!==undefined&&ans[i]!==Q[i][3];
+  d.querySelectorAll('.opt').forEach(function(o,k){o.setAttribute('aria-pressed',ans[i]===k?'true':'false');o.classList.toggle('ok',ans[i]!==undefined&&k===Q[i][3]);o.classList.toggle('no',ans[i]===k&&k!==Q[i][3])});
+  d.classList.toggle('bad',wrong);var dt=d.querySelector('details');if(dt)dt.open=wrong}
+Q.forEach(function(q,i){var d=document.createElement('div');d.className='q';
+  d.innerHTML='<h3><small>Вопрос '+(i+1)+' · '+q[0]+'</small>'+q[1]+'</h3><div class="opts">'+q[2].map(function(o){return '<button class="opt" type="button" aria-pressed="false">'+o+'</button>'}).join('')+'</div><details><summary>Почему так</summary><p>'+q[4]+'</p></details>';
+  qs.appendChild(d);
+  d.querySelectorAll('.opt').forEach(function(o,j){o.addEventListener('click',function(){ans[i]=j;paint(i);score()})})});
+function score(){var n=nAns(),ok=nOk();$('sc').textContent='Верно: '+ok+' из '+Q.length+' · отвечено '+n;
+  var r=$('rs3');if(n===Q.length){r.hidden=false;r.textContent=ok===3?'Подтема усвоена: 3 из 3.':ok===2?'Почти: 2 из 3. Вернуться к вопросу с ошибкой и разобрать правило.':'Результат '+ok+' из 3. Вернуться к алгоритму: подлежащие, союз, общее слово.'}else r.hidden=true}
+score();
+
+$('cp').addEventListener('click',function(){var t=$('cp').closest('.hw').querySelector('p').textContent,m=$('cm');
+  function ok(){m.textContent='Скопировано'}
+  function fb(){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');ok()}catch(e){m.textContent='Выделите текст вручную'}document.body.removeChild(a)}
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,fb);else fb()});
+
+/* плавное появление */
+var rv=[].slice.call(document.querySelectorAll('.body>*'));
+rv.forEach(function(x){x.classList.add('rv')});
+if('IntersectionObserver' in window&&!RM){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{rootMargin:'0px 0px -6% 0px',threshold:.05});rv.forEach(function(x){io.observe(x)})}
+else rv.forEach(function(x){x.classList.add('in')});
+
+/* таймер */
+var T=60*60,sec=0,run=false,iv=null,st=[].slice.call(document.querySelectorAll('.stage[data-start]'));
+function pad(n){return (n<10?'0':'')+n}
+function tick(){var m=Math.floor(sec/60),c=$('clock');c.textContent=pad(m)+':'+pad(sec%60)+' / 60:00';c.classList.toggle('over',sec>T);
+  var cu=null;st.forEach(function(s){if(m>=+s.dataset.start)cu=s});
+  st.forEach(function(s){s.classList.toggle('now',run&&s===cu)});
+  $('bs').textContent=(run||sec>0)&&cu?cu.dataset.name:'Занятие не начато'}
+$('tg').addEventListener('click',function(){run=!run;$('tg').textContent=run?'Пауза':(sec?'Продолжить':'Старт');
+  if(run)iv=setInterval(function(){sec++;tick()},1000);else clearInterval(iv);tick()});
+$('rs').addEventListener('click',function(){run=false;clearInterval(iv);sec=0;$('tg').textContent='Старт';tick()});
+tick();
+})();
+</script></body></html>
